@@ -60,15 +60,14 @@ export default class AnatomyExample extends Component {
   async setChecked(task) {
     console.log("Setting checked", task.id)
     // await task.check()
-    await this.props.database.action(async () => {
-      await task.markAsDeleted()
-    })
+    await task.delete()
     this.updatePage()
   }
 
   async rename(task) {
     console.log("Renaming", task.id)
     await task.rename()
+    this.updatePage()
   }
 
   render() {

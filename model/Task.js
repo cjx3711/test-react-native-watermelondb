@@ -6,7 +6,7 @@ import { desc } from '@nozbe/watermelondb/QueryDescription'
 export default class Task extends Model {
   static table = 'tasks'
   static associations = {
-    comments: { type: 'has_many', foreignKey: 'task_id' },
+    subtasks: { type: 'has_many', foreignKey: 'task_id' },
   }
 
   @field('description') description

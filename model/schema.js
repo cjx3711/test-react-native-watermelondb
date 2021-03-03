@@ -9,7 +9,7 @@ export const mySchema = appSchema({
         { name: 'description', type: 'string' },
         { name: 'is_complete', type: 'boolean' },
         { name: 'created_at', type: 'number' }, // This will be a date but we define it as an integer
-        { name: 'updataed_at', type: 'number' } // This will be a date but we define it as an integer
+        { name: 'updated_at', type: 'number' } // This will be a date but we define it as an integer
       ]
     }),
     tableSchema({
@@ -19,7 +19,7 @@ export const mySchema = appSchema({
         { name: 'is_complete', type: 'boolean' },
         { name: 'task_id', type: 'string', isIndexed: true }, // This is a foreign key but we define it as a string
         { name: 'created_at', type: 'number'}, // This will be a date but we define it as an integer
-        { name: 'updataed_at', type: 'number'} // This will be a date but we define it as an integer
+        { name: 'updated_at', type: 'number'} // This will be a date but we define it as an integer
       ]
     }),
   ]
